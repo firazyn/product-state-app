@@ -42,26 +42,31 @@ class ProductBox extends StatelessWidget {
   final String image;
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.all(2),
-        height: 140,
-        child: Card(
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-              Image.asset("assets/" + image),
-              Expanded(
-                  child: Container(
-                      padding: EdgeInsets.all(5),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          Text(this.name,
-                              style: TextStyle(fontWeight: FontWeight.bold)),
-                          Text(this.description),
-                          Text("Price: " + this.price.toString()),
-                          RatingBox(),
-                        ],
-                      )))
-            ])));
+      padding: EdgeInsets.all(2),
+      height: 140,
+      child: Card(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Image.asset("assets/" + image),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.all(5),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Text(this.name,
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                    Text(this.description),
+                    Text("Price: " + this.price.toString()),
+                    RatingBox(),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
